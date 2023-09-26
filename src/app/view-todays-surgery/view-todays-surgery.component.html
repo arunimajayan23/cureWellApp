@@ -1,0 +1,81 @@
+<app-nav></app-nav>
+
+<div class="container mt-5 text-center">
+
+    <h2>View Today's Surgery Details</h2>
+
+    <table class="table table-hover" border="1">
+
+      <thead class="bg-black text-white">
+
+        <td>Surgery Id</td>
+
+        <td>Doctor Id</td>
+
+        <td>Surgery Date</td>
+
+        <td>Start Time</td>
+
+        <td>End Time</td>
+
+        <td>Surgery Category</td>
+
+        <td>Action</td>
+
+      </thead>
+
+      <tbody>
+
+        <tr *ngFor="let s of serv.surgeryList">
+
+           
+
+ 
+
+            <td >{{s.SurgeryId}}</td>
+
+ 
+
+            <td>{{s.DoctorId}}</td>
+
+ 
+
+            <td>{{ s.SurgeryDate | date: 'yyyy-MM-dd' }}</td>
+
+ 
+
+           
+
+ 
+
+            <td>{{s.StartTime}}</td>
+
+ 
+
+            <td>{{s.EndTime}}</td>
+
+            <td>{{s.SurgeryCategory}}</td>
+
+            <td><button class="btn  btn-lg "[routerLink]="['/updatesurgery', s.SurgeryId]" type="submit" >
+
+           Edit Surgery Time
+
+    </button></td>
+
+ 
+
+ 
+
+           
+
+ 
+
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+ 

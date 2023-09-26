@@ -1,0 +1,43 @@
+<app-nav></app-nav>
+
+
+<div class="container  ">
+
+    <div class="row">
+  
+      <div class="col">
+  
+        <h2 class="text-center ">View Specialization</h2>
+
+<table class="table table-hover text-center border ">
+
+    <thead  >
+
+        <th class="text-center bg-dark-subtle">Specialization Code</th>
+
+        <th class="text-center bg-dark-subtle">Specialization Name</th>
+        <th class="text-center bg-dark-subtle">Action</th>
+
+    
+    </thead>
+
+    <tbody>
+
+        <tr *ngFor="let s of serv.specializationList">
+
+            <td >{{s.SpecializationCode}}</td>
+
+            <td >{{s.SpecializationName}}</td>
+            <td><Button (click)="onViewDoctors(s.SpecializationCode)">View Doctors</Button></td>
+        </tr>
+
+    </tbody>
+
+</table>
+</div>
+
+</div>
+
+</div>
+
+
